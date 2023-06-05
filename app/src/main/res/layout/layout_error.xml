@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="32dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/error_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/error_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060000002"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/drawable_error" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/error_tv"
+        style="@style/PoppinsSemiBold24spRhinoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/some_error_occurred"
+        app:layout_constraintBottom_toTopOf="@+id/error_description_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/error_iv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/error_description_tv"
+        style="@style/PoppinsRegular14spRhinoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/rhino"
+        app:layout_constraintBottom_toTopOf="@+id/retry_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/error_tv"
+        tools:text="Api gave 500" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/retry_btn"
+        style="@style/BlueBtn12dpTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/try_again"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/error_description_tv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
